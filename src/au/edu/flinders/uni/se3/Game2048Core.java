@@ -10,4 +10,9 @@ public class Game2048Core implements Game2048ProcesserIf {
 		return null;
 	}
 
+	public int[] combine_tiles(int[] old) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
 }
