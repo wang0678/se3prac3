@@ -5,6 +5,7 @@ import au.edu.flinders.uni.se3.Game2048ProcesserIf;
 
 public class Game2048Core implements Game2048ProcesserIf {
 <<<<<<< HEAD
+<<<<<<< HEAD
 	
 	
 	
@@ -39,6 +40,8 @@ public class Game2048Core implements Game2048ProcesserIf {
 
 	
 =======
+=======
+>>>>>>> 12febd0b97de18fc72d1b317ed23eafdd73f0473
 
 	public int[] tilt_line_left(int[] old) {
 		
@@ -50,5 +53,9 @@ public class Game2048Core implements Game2048ProcesserIf {
 		return null;
 	}
 
+<<<<<<< HEAD
+}
+>>>>>>> 12febd0b97de18fc72d1b317ed23eafdd73f0473
+=======
 }
 >>>>>>> 12febd0b97de18fc72d1b317ed23eafdd73f0473
