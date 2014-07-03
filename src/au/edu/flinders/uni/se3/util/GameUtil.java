@@ -10,10 +10,14 @@ public abstract class GameUtil {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 	public static final int ROWS = 4;
 
 	public static final int COLS = 4;
 	
+=======
+
+>>>>>>> 12febd0b97de18fc72d1b317ed23eafdd73f0473
 =======
 
 >>>>>>> 12febd0b97de18fc72d1b317ed23eafdd73f0473
@@ -56,7 +60,11 @@ public abstract class GameUtil {
 
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 	
+=======
+
+>>>>>>> 12febd0b97de18fc72d1b317ed23eafdd73f0473
 =======
 
 >>>>>>> 12febd0b97de18fc72d1b317ed23eafdd73f0473
