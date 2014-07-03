@@ -39,8 +39,24 @@ public class Game2048Core implements Game2048ProcesserIf {
 	 * tilt_line_left method).
 	 */
 	public int[] combine_tiles(int[] oldline) {
+		int j = 0;
+		int[] after = new int[COLS];
+		for (int i = 0; i < COLS && oldline[i] > 0; i++) {
+			int value = oldline[i];
+			if (i < COLS - 1 && oldline[i] == oldline[i + 1]) {
+				value *= 2;
+				//Calculate score here.
+				score+=value;
+				after[j] = value;
+				i++;
+			} else {
+				after[j] = oldline[i];
+
+			}
+			j++;
+		}
 		
-		return null;
+		return after;
 	}
 	
 	/**
