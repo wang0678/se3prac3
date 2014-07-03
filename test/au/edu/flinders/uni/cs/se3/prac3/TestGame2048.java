@@ -135,5 +135,5 @@ public class TestGame2048 extends TestCase {
 			fail();
 		}
 	}
-}
 
+}
