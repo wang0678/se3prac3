@@ -36,9 +36,27 @@ public class TestGame2048 extends TestCase {
 			GameUtil.printLine(old, "", after, expected, GameUtil.FAILED);
 			fail();
 	}
-	}
 		
-	
+		old = new int[] { 2, 0, 0, 2 };
+		after = processer.tilt_line_left(old);
+		expected = new int[] { 2, 2, 0, 0 };
+		if (GameUtil.compareExpectToActualLine(expected, after)) {
+			GameUtil.printLine(old, "", after, expected, GameUtil.PASSED);
+		} else {
+			GameUtil.printLine(old, "", after, expected, GameUtil.FAILED);
+			fail();
+		}
+
+		old = new int[] { 2, 0, 0, 0 };
+		after = processer.tilt_line_left(old);
+		expected = new int[] { 2, 0, 0, 0 };
+		if (GameUtil.compareExpectToActualLine(expected, after)) {
+			GameUtil.printLine(old, "", after, expected, GameUtil.PASSED);
+		} else {
+			GameUtil.printLine(old, "", after, expected, GameUtil.FAILED);
+			fail();
+		}
+	}
 	public void test_combine_tiles() {
 		}
 	}
