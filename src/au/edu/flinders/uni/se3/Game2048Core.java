@@ -65,7 +65,17 @@ public class Game2048Core implements Game2048ProcesserIf {
 	public int[] tilt_line_left_combine(int[] oldline) {
 		return combine_tiles(tilt_line_left(oldline));
 	}
+
+	/**
+	 * To implement the method to tilt the board to left.
+	 */
+	public void tilt_board_left() {
+
 }
 
+	public int score() {
+		return score;
+	}
 
 	
+}
