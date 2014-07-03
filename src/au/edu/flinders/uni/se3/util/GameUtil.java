@@ -46,5 +46,8 @@ public abstract class GameUtil {
 		return txt;
 	}
 
-	
+	public static String convertLineToTxtWithSep(int i1, int i2, int i3, int i4) {
+		String txt = "{" + i1 + SEP + i2 + SEP + i3 + SEP + i4 + "}";
+		return txt;
+	}
 }

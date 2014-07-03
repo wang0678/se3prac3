@@ -136,4 +136,34 @@ public class TestGame2048 extends TestCase {
 		}
 	}
 
+	private boolean line_vector_test(int i1, int i2, int i3, int i4,
+			String msg, int o1, int o2, int o3, int o4) {
+		Game2048Core processer = new Game2048Core();
+		int list[] = { i1, i2, i3, i4 };
+		if (null != msg) {
+			System.out.print(msg);
+		} else {
+			System.out.print(" Tilting "
+					+ GameUtil.convertLineToTxtWithSep(i1, i2, i3, i4)
+					+ " left yields "
+					+ GameUtil.convertLineToTxtWithSep(o1, o2, o3, o4));
+		}
+		list = processer.tilt_line_left_combine(new int[] { i1, i2, i3, i4 });
+
+		if ((list[0] != o1) || (list[1] != o2) || (list[2] != o3)
+				|| (list[3] != o4)) {
+
+			System.out.println(" FAILED: "
+					+ GameUtil.convertLineToTxtWithSep(i1, i2, i3, i4)
+					+ " became " + GameUtil.convertLineToTxtWithSep(list)
+					+ " instead of "
+					+ GameUtil.convertLineToTxtWithSep(o1, o2, o3, o4));
+
+			return false;
+		}
+		System.out.println(" - PASSED.");
+		return true;
+	}
+
+	
 }
