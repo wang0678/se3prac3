@@ -165,5 +165,25 @@ public class TestGame2048 extends TestCase {
 		return true;
 	}
 
+	public void test_tilt_left() {
+		boolean e = true;
+		e &= line_vector_test(0, 0, 0, 0, "Empty list is empty after shift", 0,
+				0, 0, 0);
+		e &= line_vector_test(1, 0, 0, 0,
+				"Value on left stays on left after shift", 1, 0, 0, 0);
+		e &= line_vector_test(0, 0, 0, 1,
+				"Value on right shifts to left edge after shift", 1, 0, 0, 0);
+		e &= line_vector_test(0, 0, 1, 0,
+				"Value in middle shifts to left edge after shift", 1, 0, 0, 0);
+		e &= line_vector_test(1, 2, 4, 8, "Distinct values don't combine", 1,
+				2, 4, 8);
+		e &= line_vector_test(1, 1, 1, 1, "Combinations don't cascade", 2, 2,
+				0, 0);
+		e &= line_vector_test(0, 0, 1, 1, null, 2, 0, 0, 0);
+		e &= line_vector_test(4, 0, 1, 1, null, 4, 2, 0, 0);
+		e &= line_vector_test(2, 0, 1, 1, null, 2, 2, 0, 0);
 	
+		assertTrue(e);
+
+	}
 }
